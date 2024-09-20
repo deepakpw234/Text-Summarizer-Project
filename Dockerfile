@@ -1,6 +1,6 @@
 FROM python:3.11-slim-buster
 
-RUN app update -y && apt install awsli -y
+RUN apt update -y && apt install awsli -y
 WORKDIR /app
 
 COPY . /app
