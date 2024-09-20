@@ -5,6 +5,8 @@ WORKDIR /app
 
 COPY . /app
 
+
+
 RUN pip install -r requirements.txt
 RUN pip install accelerate
 RUN pip install --upgrade accelerate
