@@ -15,13 +15,13 @@ app = FastAPI()
 async def index():
     return RedirectResponse(url="docs")
 
-# @app.get("/train")
-# async def training():
-#     try:
-#         os.system("python main.py")
-#         return Response("Training Successful !!")
-#     except Exception as e:
-#         return Response(f"Error Occurred! {e}")
+@app.get("/train")
+async def training():
+    try:
+        os.system("python main.py")
+        return Response("Training Successful !!")
+    except Exception as e:
+        return Response(f"Error Occurred! {e}")
     
 
 @app.get("/predict")
